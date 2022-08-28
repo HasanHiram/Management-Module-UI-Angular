@@ -1,0 +1,29 @@
+<div class="wrapper table_locations">
+    <div class="table_radius">
+        <table class="table" >
+            <thead class="locations_table_header">
+            <tr id="locations_first_row">
+                <th scope="col">Location</th>
+                <th scope="col">Licenses</th>
+                <th scope="col">Enrollment Date</th>
+                <th scope="col">Products</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of locations">
+                <td class="table_row"> <img src="{{item.image}}" alt=""> {{item.name}} </td>
+                <td class="table_row grey">{{item.licences}}</td>
+                <td class="table_row grey">{{item.enrollmentDate}}</td>
+                <td class="usage_column">
+                    <img class="usage_imgs" src="../../assets/module_usage/kep.svg" *ngIf="item.products.exams" alt="">
+                    <img class="usage_imgs" src="../../assets/module_usage/goz.svg" *ngIf="item.products.monitoring" alt="">
+                    <img class="usage_imgs" src="../../assets/module_usage/kalemler.svg" *ngIf="item.products.applicationLibrary" alt="">
+                </td>
+            </tr>
+            
+            </tbody>
+        </table>
+    </div>
+
+
+</div>

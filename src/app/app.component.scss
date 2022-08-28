@@ -1,0 +1,191 @@
+
+.parent{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.sidebar{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    background-color: #FFFFFF;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #C7C7C7;
+    
+    
+}
+
+.cool_logo{
+    margin-top: 37px;
+    margin-left: 52px;
+    margin-right: 52px;
+}
+
+.menu{
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 80px;
+    
+}
+.menu img{
+    padding-right: 10px;
+}
+
+.menu h6{
+    display: inline-block;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #C7C7C7;
+}
+
+.overview_menu{
+    cursor:pointer;
+    margin-bottom: 10px;
+    width: 180px;
+}
+
+.overview_menu:hover{
+    background-color: #F0F7FF;
+    color:#7393B3;
+    width: 180px;
+    
+}
+
+.locations_menu:hover{
+    cursor: pointer;
+    background-color: #F0F7FF;
+    color:#7393B3;
+    width: 180px;
+    
+}
+
+.line{ 
+    position: absolute;
+    height: 900px;
+    border-left: 1px solid #F8F8F8;
+    top:0px;
+    right:0px;
+
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    margin:0px;
+    padding: 0px;
+    height: 100vh;
+    width: 1250px;
+   
+}
+
+.header{   
+    height: 28%;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+
+.content{    
+    background-color: #ffffff;
+    height: 87%;
+}
+
+
+.header_locations{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 43.3726px;
+    line-height: 54px;
+    color: #404040;
+    margin-top: 23px;
+    margin-left: 50px;
+}
+
+
+.header_overview{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 43.3726px;
+    line-height: 54px;
+    color: #404040;
+    margin-top: 23px;
+    margin-left: 50px;
+}
+
+#header_plus_button{
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+   
+}
+
+#header_explanation{
+    margin:0px;
+    padding:0px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.0564px;
+    line-height: 20px;
+    color: #AEAEAE;
+
+}
+
+
+.header_images{
+    display: flex;
+    flex-direction: row;
+}
+
+.admin_box{
+    padding-right: 20px;
+}
+
+#admin_icon{
+    background: #FFC145;
+    border-radius: 25px;
+    width: 35.06px;
+    height: 35.06px;
+}
+
+.admin_name{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #404040;
+
+}
+
+.admin_account{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #AEAEAE;
+}
+
+.admin_exp{
+    margin-top: 15px;
+}

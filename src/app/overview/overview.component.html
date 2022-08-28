@@ -1,0 +1,294 @@
+<div class="wrapper">
+    <!--------
+    <div >
+        {{item1[0].image}}:{{item1[0].value}}
+      </div>
+    ---->
+
+    <div class="finance">
+        <div class="cards">
+            <h5 class="cards_text">Cards</h5>
+            <div class="card_main">
+                <img src="../../assets/overview/card.svg" alt="">
+                <div class="cards_texts_inner">
+                    <h4 id="cloudcash_text">cloudcash</h4>
+                    <h6 id="premium_text">PREMIUM ACCOUNT</h6>
+                    <h3 id="card_number_text">5789 ***** **** 2847</h3>
+                    <div class="card_owner_info">
+                      
+                            <div class="column">
+                                <h6 id="card_holder_text">Card Holder</h6>
+                                <h5 id="name_text">Mike Smith</h5>
+                            </div>
+                            <div class="column">
+                                <h6 id="expire_text">Expire Date</h6>
+                                <h5 id="card_date_text">06/21</h5>
+                            </div>
+    
+                      
+
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="seperator"></div>
+
+            <div class="payment_details">
+                <div class="money_blue_div">
+                    <p class="money_blue">$ {{cards.balance.current}} </p>
+                    <p class="money_explanation">Current balance</p>
+                </div>
+                <div class="money_green_div">
+                    <p class="money_green">$ {{cards.balance.credit}}</p>
+                    <p class="money_explanation">Available credit</p>
+                </div>
+                <div class="money_red_div">
+                    <p class="money_red">$ {{cards.balance.provisions}} </p>
+                    <p class="money_explanation">Awaiting provisions</p>
+                </div>
+               <div class="switch_div">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <p class="money_explanation">Deactivate card</p>
+                </div>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%;"  aria-valuemin="0" aria-valuenow="350.60" aria-valuemax="4000"></div>
+            </div>
+
+            <div class="expense_text">
+                <p id="expense_limit_text">Expense limit</p>
+                <p id="expense_limit_dollar">${{cards.balance.provisions}} / $4000</p>
+            </div>
+        </div>
+
+
+        <div class="billing_summary">
+
+            <h5 id="billing_text">Billing summary</h5>    
+            
+            <div class="table_div">
+                <table class="table table-borderless table-sm">
+                    <thead>
+                        <tr>
+                        <th scope="col">Service</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr  *ngFor="let item of billing.slice(0,5)"  >
+                            <td  class="billing_service_columns">
+                                <div class="rectangle"></div>
+                               {{item.service}} 
+                            </td>
+                            <td class="billing_type_columns"> $/{{item.type}} </td>
+                            <td class="billing_date_columns">{{item.date}}</td>
+                            <td class="billing_amount_columns">${{item.amount}}</td>
+                        </tr>
+
+                    <!--------------------------------------------
+
+                        <tr>
+                            <td class="billing_service_columns">
+                                <div class="rectangle"></div>
+                                Exams
+                            </td>
+                            <td class="billing_type_columns">$/session</td>
+                            <td class="billing_date_columns">13 Dec 2020</td>
+                            <td class="billing_amount_columns">$275.11</td>
+                        </tr>
+                        <tr>
+                            <td class="billing_service_columns">
+                                <div class="rectangle"></div>
+                                Exams
+                            </td>
+                            <td class="billing_type_columns">$/session</td>
+                            <td class="billing_date_columns">13 Dec 2020</td>
+                            <td class="billing_amount_columns">$35.25</td>
+                        </tr>
+                        <tr>
+                            <td class="billing_service_columns">
+                                <div class="rectangle"></div>
+                                Application Library
+                            </td>
+                            <td class="billing_type_columns">$/session</td>
+                            <td class="billing_date_columns">13 Dec 2020</td>
+                            <td class="billing_amount_columns">$164.33</td>
+                        </tr>
+                        <tr>
+                            <td class="billing_service_columns">
+                                <div class="rectangle"></div>
+                                Monitoring
+                            </td>
+                            <td class="billing_type_columns">$/session</td>
+                            <td class="billing_date_columns">13 Dec 2020</td>
+                            <td class="billing_amount_columns">$28.57</td>
+                        </tr>
+
+
+                    ----------------->
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="management">
+
+
+        <div class="locations">
+            <div class="locations_header">
+                <h5 style="display: inline-block;" class="locations_h5_text">Locations</h5>
+                <a id="overview_add_location" (click)="showAddLocation()"> <img src="../../assets/location/add.svg" style="display: inline-block;" id="add_button" alt="">  </a>
+            </div>
+
+            <div class="places">
+                <div class="place_1">
+                    <div   class="place1_texts">
+                        <p class="license_count"> {{locations[5].licences}} </p>
+                        <p class="license_text">Licenses</p>
+                       <img src="{{locations[5].image}}" alt="">
+                        <p class="location_name">{{locations[5].name}}</p>
+                    </div>
+                </div>
+
+                
+                <div class="place_2">
+                    <div class="place2_texts">
+                        <p class="license_count">{{locations[4].licences}}</p>
+                        <p class="license_text">Licenses</p>
+                        <img src="{{locations[4].image}}" alt="">
+                        <p class="location_name">{{locations[4].name}}</p>
+                    </div>
+                </div>
+                <div class="place_3">
+                    <div class="place3_texts">
+                        <p class="license_count">{{locations[3].licences}}</p>
+                        <p class="license_text">Licenses</p>
+                        <img src="{{locations[3].image}}" alt="">
+                        <p class="location_name">{{locations[3].name}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <div class="module_usage">
+            <div class="module_usage_header">
+                <h5 id="module_usage_header_text">Module usage</h5>
+            </div>
+
+            <div class="container module_usage_all">
+                <div class="row">
+                  <div class="col-sm module_usage_image">
+                    <img src="../../assets/module_usage/kep.svg" alt="">
+                        <p class="module_usage_texts"> Exams </p>
+                  </div>
+                  <div class="col-sm" style="position:relative">
+                    <div class="progress progress_head">
+                        <div class="progress-bar bg-warning module_usage_progress" role="progressbar" style="width: 52%; display: inline-block;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                        
+                  </div>
+                  <div class="col-sm percentage">
+                    52%
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm module_usage_image">
+                      <img src="../../assets/module_usage/goz.svg" alt="">
+                          <p class="module_usage_texts">Monitoring</p>
+                    </div>
+                    <div class="col-sm" style="position:relative">
+                      <div class="progress progress_head">
+                          <div class="progress-bar bg-warning module_usage_progress_monitoring" role="progressbar" style="width: 33%; display: inline-block;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                          
+                    </div>
+                    <div class="col-sm percentage">
+                      33%
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-sm module_usage_image">
+                      <img src="../../assets/module_usage/kalemler.svg" alt="">
+                          <p class="module_usage_texts"> Application Library </p>
+                    </div>
+                    <div class="col-sm" style="position:relative">
+                      <div class="progress progress_head">
+                          <div class="progress-bar  module_usage_progress_application" role="progressbar" style="width: 15%; display: inline-block; " aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                          
+                    </div>
+                    <div class="col-sm percentage">
+                      15%
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <!--ADMINISTRATORS MODULE-->
+
+        <div class="administrators">
+            <div class="container">
+                <div class="row">
+                    <div class="deneme">
+                        <div class="column administrators_left_side">
+                            <div class="row">
+                                <h5 id="administrators_header">Administrators</h5>
+                            </div>
+                            <div class="row_container" style="margin-right: -5px;">
+                            <div class="row">
+                                <figure *ngFor="let item of administrators.slice(0,5)">
+                                    <img src="{{item.image}}" alt="" class="admin_images">
+                                    <figcaption> {{item.name}} </figcaption>
+                                </figure>                               
+                            </div>
+
+                            <div class="row" >
+                                <div class="form-group admin_form">  
+                                    <form action="">               
+                                        <input type="email" class="form-control invite_form" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                        <input type="submit" value="    Invite" class="submit_button">
+                                    </form>  
+                                </div>
+
+                            </div>
+                        </div>
+                        
+
+                        </div>
+                        <div class="supp">
+                            <img src="../../assets/administrator/support.svg" alt="">
+                            <div class="supp_texts">
+                                <h5 class="supp_h">Contact</h5>
+                                <h5 class="supp_h">Support</h5>
+                            </div>
+                       </div>
+
+                    </div>
+                
+              
+            </div>
+            </div>
+        </div>
+        <!-------------ADMINISTRATORS FINISHED-->
+        
+      
+
+
+    </div>
+
+</div>
